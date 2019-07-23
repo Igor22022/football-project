@@ -1,0 +1,19 @@
+table{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+}
+th{
+	background: #333;
+	color: #fff;
+	padding: 12px 10px;
+	font-size: 20px;
+}
+td{
+	padding: 10px 10px;
+	text-align: center;
+}
+.table_list{
+	margin: 0 auto;
+	width: 100%;
+}

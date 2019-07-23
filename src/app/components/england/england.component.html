@@ -1,0 +1,33 @@
+<div *ngIf="allTeamsInfo" class="table_list">
+	<table>
+		<thead>
+			<tr>
+				<th>№</th>
+				<th>Команда</th>
+				<th>І</th>
+				<th>В</th>
+				<th>Н</th>
+				<th>П</th>
+				<th>ЗАБ</th>
+				<th>ПРОП</th>
+				<th>РІЗ</th>
+				<th>ОЧКИ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let team of allTeamsInfo">
+				<td>{{team.id}}</td>
+				<td (click)= "selectTeam(team); changeStyle()" [class.active]= "team === currentTeam">{{team.team}}</td>
+				<td>{{team.playedGames}}</td>
+				<td>{{team.won}}</td>
+				<td>{{team.drawn}}</td>
+				<td>{{team.lost}}</td>
+				<td>{{team.gf}}</td>
+				<td>{{team.ga}}</td>
+				<td>{{team.gd}}</td>
+				<td>{{team.points}}</td>
+			</tr>
+			<team-players [inputedTeam]= "currentTeam"></team-players>
+		</tbody>
+	</table>
+</div>
